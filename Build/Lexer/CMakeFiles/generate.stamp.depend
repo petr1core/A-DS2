@@ -1,0 +1,11 @@
+# CMake generation dependency list for this directory.
+D:/Program files/CMake/share/cmake-3.29/Modules/CMakeCInformation.cmake
+D:/Program files/CMake/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake
+D:/Program files/CMake/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake
+D:/Program files/CMake/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake
+D:/Program files/CMake/share/cmake-3.29/Modules/Compiler/MSVC-C.cmake
+D:/Program files/CMake/share/cmake-3.29/Modules/Compiler/MSVC.cmake
+D:/Program files/CMake/share/cmake-3.29/Modules/Platform/Windows-MSVC-C.cmake
+D:/Program files/CMake/share/cmake-3.29/Modules/Platform/Windows-MSVC.cmake
+E:/Files/Git/A-DS2/A-DS2/Build/CMakeFiles/3.29.0/CMakeCCompiler.cmake
+E:/Files/Git/A-DS2/A-DS2/Lexer/CMakeLists.txt

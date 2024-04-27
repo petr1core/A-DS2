@@ -1,0 +1,6 @@
+file(GLOB srcs "*.cpp")
+file(GLOB hdrs "*.h")
+add_executable(${ParserTest} ${srcs} ${hdrs})
+target_link_libraries(${ParserTest} ${ParserLib} gtest)
+
+# ParserTest

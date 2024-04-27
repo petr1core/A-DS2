@@ -1,0 +1,58 @@
+cmake_minimum_required(VERSION 3.5)
+set(PROJECT_NAME ADS-2-Lab)
+project(${PROJECT_NAME} CXX)
+
+set(Lexer "${PROJECT_NAME}/Lexer")
+set(LexerTest LexerTest)
+set(LexerLib LexerLib)
+
+set(Parser Parser)
+set(ParserTest ParserTest)
+set(ParserLib ParserLib)
+
+set(Expression Expression)
+set(ExpressionTest ExpressionTest)
+set(ExpressionLib ExpressionLib)
+
+set(Token Token)
+set(TokenTest TokenTest)
+set(TokenLib TokenLib)
+
+### Supporting classes
+
+set(HierarchyList HierarchyList)
+set(HierarchyListTest HierarchyListTest)
+set(HierarchyListLib HierarchyListLib)
+
+set(Postfix Postfix)
+set(PostfixTest PostfixTest)
+set(PostfixLib PostfixLib)
+
+set(Stack Stack)
+set(StackTest StackTest)
+set(StackLib StackLib)
+
+set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+
+set(CMAKE_CONFIGURATION_TYPES "Debug;Release" CACHE STRING "Configs" FORCE)
+if(NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE Release)
+endif()
+
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/gtest)
+add_subdirectory(gtest)
+
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/SupportingClasses)
+add_subdirectory(SupportingClasses)
+
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/Expression)
+add_subdirectory(Expression)
+
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/Lexer)
+add_subdirectory(Lexer)
+
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/Parser)
+add_subdirectory(Parser)
+
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/Token)
+add_subdirectory(Token)
