@@ -174,7 +174,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="E:\Files\Git\A-DS2\A-DS2\Stack\StackTest\Stack _test_main.cpp" />
     <ClCompile Include="E:\Files\Git\A-DS2\A-DS2\Stack\StackTest\Stack_gtest.cpp" />
     <ClCompile Include="E:\Files\Git\A-DS2\A-DS2\Stack\StackTest\Stack_test.cpp" />
   </ItemGroup>

@@ -42,6 +42,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("E:/Files/Git/A-DS2/A-DS2/Build/Stack/cmake_install.cmake")
   include("E:/Files/Git/A-DS2/A-DS2/Build/Postfix/cmake_install.cmake")
   include("E:/Files/Git/A-DS2/A-DS2/Build/HierarchyList/cmake_install.cmake")
+  include("E:/Files/Git/A-DS2/A-DS2/Build/Polinom/cmake_install.cmake")
+  include("E:/Files/Git/A-DS2/A-DS2/Build/ListLinearTable/cmake_install.cmake")
 
 endif()
 

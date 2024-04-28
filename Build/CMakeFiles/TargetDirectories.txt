@@ -15,3 +15,7 @@ E:/Files/Git/A-DS2/A-DS2/Build/Postfix/Postfix/CMakeFiles/Postfix.dir
 E:/Files/Git/A-DS2/A-DS2/Build/Postfix/PostfixTest/CMakeFiles/PostfixTest.dir
 E:/Files/Git/A-DS2/A-DS2/Build/HierarchyList/HierarchyList/CMakeFiles/HierarchyList.dir
 E:/Files/Git/A-DS2/A-DS2/Build/HierarchyList/HierarchyListTest/CMakeFiles/HierarchyListTest.dir
+E:/Files/Git/A-DS2/A-DS2/Build/Polinom/Polinom/CMakeFiles/Polinom.dir
+E:/Files/Git/A-DS2/A-DS2/Build/Polinom/PolinomTest/CMakeFiles/PolinomTest.dir
+E:/Files/Git/A-DS2/A-DS2/Build/ListLinearTable/ListLinearTable/CMakeFiles/ListLinearTable.dir
+E:/Files/Git/A-DS2/A-DS2/Build/ListLinearTable/ListLinearTableTest/CMakeFiles/ListLinearTableTest.dir

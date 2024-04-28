@@ -10,8 +10,8 @@
 #include <cmath>
 #include <stdexcept>
 #include <iostream>
-#include "Stack.h"
-#include "Token.h"
+#include "../Stack/StackLib/Stack.h"
+#include "../Token/TokenLib/Token.h"
 #include <vector>
 #include <cctype>
 using namespace std;

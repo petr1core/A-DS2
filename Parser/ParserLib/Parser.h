@@ -4,14 +4,13 @@
 
 #ifndef PARSER_H
 #define PARSER_H
-#include<bits/stdc++.h>
 #include "stdexcept"
-#include "Lexer.h"
-#include "Token.h"
-#include "HierarchyList.h"
-#include "Expression/ExceptionAST.h"
-#include "Expression/Expression.h"
-#include "Expression/RunnableExpression.h"
+#include "../Lexer/LexerLib/Lexer.h"
+#include "../Token/TokenLib/Token.h"
+#include "../HierarchyList/HierarchyListLib/HierarchyList.h"
+#include "../Expression/ExpressionLib/ExceptionAST.h"
+#include "../Expression/ExpressionLib/Expression.h"
+#include "../Expression/ExpressionLib/RunnableExpression.h"
 using namespace std;
 class AgeException: public std::exception
 {

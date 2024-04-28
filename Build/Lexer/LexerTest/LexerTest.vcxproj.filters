@@ -7,9 +7,6 @@
     <ClCompile Include="E:\Files\Git\A-DS2\A-DS2\Lexer\LexerTest\Lexer_test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="E:\Files\Git\A-DS2\A-DS2\Lexer\LexerTest\Lexer_test_main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="E:\Files\Git\A-DS2\A-DS2\Lexer\LexerTest\CmakeLists.txt" />

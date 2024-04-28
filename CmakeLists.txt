@@ -28,40 +28,5 @@ add_subdirectory(Token)
 add_subdirectory(Stack)
 add_subdirectory(Postfix)
 add_subdirectory(HierarchyList)
-
-
-## set(Lexer "${PROJECT_NAME}/Lexer")
-## set(LexerTest LexerTest)
-## set(LexerLib LexerLib)
-
-## include_directories(${CMAKE_CURRENT_SOURCE_DIR}/SupportingClasses)
-## include_directories(${CMAKE_CURRENT_SOURCE_DIR}/Expression)
-## include_directories(${CMAKE_CURRENT_SOURCE_DIR}/Lexer)
-## include_directories(${CMAKE_CURRENT_SOURCE_DIR}/Parser)
-## include_directories(${CMAKE_CURRENT_SOURCE_DIR}/Token)
-
-## set(Parser Parser)
-## set(ParserTest ParserTest)
-## set(ParserLib ParserLib)
-
-## set(Expression "${PROJECT_NAME}/Expression")
-## set(ExpressionTest ExpressionTest)
-## set(ExpressionLib ExpressionLib)
-
-## set(Token Token)
-## set(TokenTest TokenTest)
-## set(TokenLib TokenLib)
-
-### Supporting classes
-
-## set(HierarchyList HierarchyList)
-## set(HierarchyListTest HierarchyListTest)
-## set(HierarchyListLib HierarchyListLib)
-
-## set(Postfix Postfix)
-## set(PostfixTest PostfixTest)
-## set(PostfixLib PostfixLib)
-
-## set(Stack Stack)
-## set(StackTest StackTest)
-## set(StackLib StackLib)
+add_subdirectory(Polinom) # list
+add_subdirectory(ListLinearTable)

@@ -131,6 +131,14 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{E3BEC74C-B121-3A01-9FFB-C36C4A49B764}</Project>
       <Name>LexerTest</Name>
     </ProjectReference>
+    <ProjectReference Include="E:\Files\Git\A-DS2\A-DS2\Build\ListLinearTable\ListLinearTable\ListLinearTable.vcxproj">
+      <Project>{95896E9D-9042-33AF-AF1A-9065D606EB78}</Project>
+      <Name>ListLinearTable</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\Files\Git\A-DS2\A-DS2\Build\ListLinearTable\ListLinearTableTest\ListLinearTableTest.vcxproj">
+      <Project>{5B97A38C-E897-38F0-8A99-412207F36CA1}</Project>
+      <Name>ListLinearTableTest</Name>
+    </ProjectReference>
     <ProjectReference Include="E:\Files\Git\A-DS2\A-DS2\Build\Parser\Parser\Parser.vcxproj">
       <Project>{8391B9F3-D636-32A9-93C2-CC8EE01D2A43}</Project>
       <Name>Parser</Name>
@@ -138,6 +146,14 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ProjectReference Include="E:\Files\Git\A-DS2\A-DS2\Build\Parser\ParserTest\ParserTest.vcxproj">
       <Project>{64F1992A-5053-3ECB-885E-630DFC3164BD}</Project>
       <Name>ParserTest</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\Files\Git\A-DS2\A-DS2\Build\Polinom\Polinom\Polinom.vcxproj">
+      <Project>{5A693506-AE2B-3C71-BC97-0943668655E1}</Project>
+      <Name>Polinom</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\Files\Git\A-DS2\A-DS2\Build\Polinom\PolinomTest\PolinomTest.vcxproj">
+      <Project>{E865D90D-7AB0-3E80-9B9A-3BD9DDBF8313}</Project>
+      <Name>PolinomTest</Name>
     </ProjectReference>
     <ProjectReference Include="E:\Files\Git\A-DS2\A-DS2\Build\Postfix\Postfix\Postfix.vcxproj">
       <Project>{FDAE9B48-2D2E-3D49-B615-72724546648E}</Project>

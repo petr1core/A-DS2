@@ -6,12 +6,14 @@
 #define CONDITIONEXPRESSION_H
 #include <vector>
 #include "Expression.h"
-#include "../Parser.h"
-#include <bits/stdc++.h>
+#include "../Parser/ParserLib/Parser.h"
+//#include <bits/stdc++.h>
 #include "stdexcept"
-#include "../Lexer.h"
-#include "../Token.h"
-#include "../Postfix.h"
+#include "../Lexer/LexerLib/Lexer.h"
+#include "../Token/TokenLib/Token.h"
+#include "../Postfix/PostfixLib/Postfix.h"
+
+using namespace std;
 
 class ConditionExpression: public Expression{
 private:

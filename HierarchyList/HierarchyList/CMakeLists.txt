@@ -1,6 +1,6 @@
 set(target ${SUBPROJECT_NAME})
 
-file(GLOB hdrs "*.h*" "..${SUBPROJECT_NAME}Lib/*.h*")
+file(GLOB hdrs "*.h*" "../${SUBPROJECT_NAME}Lib/*.h*")
 file(GLOB srcs "*.cpp")
 
 add_library(${target} STATIC ${srcs} ${hdrs})

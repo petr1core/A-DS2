@@ -1,4 +1,4 @@
-//include "PolinomLib/TPolinom.h"
+//include 
 #include <gtest.h>
 
 

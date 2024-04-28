@@ -5,9 +5,9 @@
 #ifndef HIERARCHYLIST_H
 #define HIERARCHYLIST_H
 #include <iostream>
-#include "Expression/RunnableExpression.h"
-#include "Token.h"
-#include "Lexer.h"
+#include "../Expression/ExpressionLib/RunnableExpression.h"
+#include "../Token/TokenLib/Token.h"
+#include "../Lexer/LexerLib/Lexer.h"
 using namespace std;
 struct Node {
     Expression* value;

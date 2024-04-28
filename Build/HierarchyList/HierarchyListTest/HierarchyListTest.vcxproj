@@ -176,7 +176,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemGroup>
     <ClCompile Include="E:\Files\Git\A-DS2\A-DS2\HierarchyList\HierarchyListTest\HierarchyList_gtest.cpp" />
     <ClCompile Include="E:\Files\Git\A-DS2\A-DS2\HierarchyList\HierarchyListTest\HierarchyList_test.cpp" />
-    <ClCompile Include="E:\Files\Git\A-DS2\A-DS2\HierarchyList\HierarchyListTest\HierarchyList_test_main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="E:\Files\Git\A-DS2\A-DS2\Build\ZERO_CHECK.vcxproj">

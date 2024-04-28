@@ -9,8 +9,8 @@
 #include<vector>
 #include<string>
 #include <set>
-#include "Token.h"
-#include "TokenType.h"
+#include "../Token/TokenLib/Token.h"
+#include "../Token/TokenLib/TokenType.h"
 #include <locale.h>
 
 //Класс вроде как закончен, мб дополнения

@@ -4,6 +4,9 @@
     <ClCompile Include="E:\Files\Git\A-DS2\A-DS2\Parser\Parser\Parser_main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="E:\Files\Git\A-DS2\A-DS2\Parser\Parser\Parser_test_main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="E:\Files\Git\A-DS2\A-DS2\Parser\ParserLib\Parser.h">

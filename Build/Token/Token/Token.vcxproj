@@ -151,6 +151,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="E:\Files\Git\A-DS2\A-DS2\Token\Token\Parser_main.cpp" />
+    <ClCompile Include="E:\Files\Git\A-DS2\A-DS2\Token\Token\Token_test_main.cpp" />
     <ClInclude Include="E:\Files\Git\A-DS2\A-DS2\Token\TokenLib\Token.h" />
     <ClInclude Include="E:\Files\Git\A-DS2\A-DS2\Token\TokenLib\TokenType.h" />
   </ItemGroup>
