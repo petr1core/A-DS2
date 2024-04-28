@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("E:/Files/Git/A-DS2/A-DS2/Build/Lexer/LexerLib/cmake_install.cmake")
+  include("E:/Files/Git/A-DS2/A-DS2/Build/Lexer/Lexer/cmake_install.cmake")
   include("E:/Files/Git/A-DS2/A-DS2/Build/Lexer/LexerTest/cmake_install.cmake")
 
 endif()

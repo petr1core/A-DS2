@@ -35,11 +35,13 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("E:/Files/Git/A-DS2/A-DS2/Build/gtest/cmake_install.cmake")
-  include("E:/Files/Git/A-DS2/A-DS2/Build/SupportingClasses/cmake_install.cmake")
   include("E:/Files/Git/A-DS2/A-DS2/Build/Expression/cmake_install.cmake")
   include("E:/Files/Git/A-DS2/A-DS2/Build/Lexer/cmake_install.cmake")
   include("E:/Files/Git/A-DS2/A-DS2/Build/Parser/cmake_install.cmake")
   include("E:/Files/Git/A-DS2/A-DS2/Build/Token/cmake_install.cmake")
+  include("E:/Files/Git/A-DS2/A-DS2/Build/Stack/cmake_install.cmake")
+  include("E:/Files/Git/A-DS2/A-DS2/Build/Postfix/cmake_install.cmake")
+  include("E:/Files/Git/A-DS2/A-DS2/Build/HierarchyList/cmake_install.cmake")
 
 endif()
 

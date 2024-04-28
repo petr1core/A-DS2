@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("E:/Files/Git/A-DS2/A-DS2/Build/Token/TokenLib/cmake_install.cmake")
+  include("E:/Files/Git/A-DS2/A-DS2/Build/Token/Token/cmake_install.cmake")
   include("E:/Files/Git/A-DS2/A-DS2/Build/Token/TokenTest/cmake_install.cmake")
 
 endif()

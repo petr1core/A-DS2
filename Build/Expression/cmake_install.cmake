@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("E:/Files/Git/A-DS2/A-DS2/Build/Expression/ExpressionLib/cmake_install.cmake")
+  include("E:/Files/Git/A-DS2/A-DS2/Build/Expression/Expression/cmake_install.cmake")
   include("E:/Files/Git/A-DS2/A-DS2/Build/Expression/ExpressionTest/cmake_install.cmake")
 
 endif()

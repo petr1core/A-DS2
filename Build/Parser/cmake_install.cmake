@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("E:/Files/Git/A-DS2/A-DS2/Build/Parser/ParserLib/cmake_install.cmake")
+  include("E:/Files/Git/A-DS2/A-DS2/Build/Parser/Parser/cmake_install.cmake")
   include("E:/Files/Git/A-DS2/A-DS2/Build/Parser/ParserTest/cmake_install.cmake")
 
 endif()

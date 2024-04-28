@@ -1,0 +1,4 @@
+set(SUBPROJECT_NAME HierarchyList)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/${SUBPROJECT_NAME}Lib)
+add_subdirectory(${SUBPROJECT_NAME})
+add_subdirectory(${SUBPROJECT_NAME}Test)

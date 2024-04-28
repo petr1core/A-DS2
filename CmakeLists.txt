@@ -1,58 +1,67 @@
 cmake_minimum_required(VERSION 3.5)
 set(PROJECT_NAME ADS-2-Lab)
-project(${PROJECT_NAME} CXX)
+project(${PROJECT_NAME})
 
-set(Lexer "${PROJECT_NAME}/Lexer")
-set(LexerTest LexerTest)
-set(LexerLib LexerLib)
+# CMAKE_BINARY_DIR - Это полный путь к верхнему уровню текущего дерева сборки CMake.
+# Для сборки в исходном коде это будет то же самое, что и CMAKE_SOURCE_DIR.
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 
-set(Parser Parser)
-set(ParserTest ParserTest)
-set(ParserLib ParserLib)
-
-set(Expression Expression)
-set(ExpressionTest ExpressionTest)
-set(ExpressionLib ExpressionLib)
-
-set(Token Token)
-set(TokenTest TokenTest)
-set(TokenLib TokenLib)
-
-### Supporting classes
-
-set(HierarchyList HierarchyList)
-set(HierarchyListTest HierarchyListTest)
-set(HierarchyListLib HierarchyListLib)
-
-set(Postfix Postfix)
-set(PostfixTest PostfixTest)
-set(PostfixLib PostfixLib)
-
-set(Stack Stack)
-set(StackTest StackTest)
-set(StackLib StackLib)
-
-set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+# Where to put all the ARCHIVE target files when built
+#
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE ${CMAKE_BINARY_DIR}/bin)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG ${CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE})
 
 set(CMAKE_CONFIGURATION_TYPES "Debug;Release" CACHE STRING "Configs" FORCE)
 if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE Release)
 endif()
 
+set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/gtest)
 add_subdirectory(gtest)
-
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/SupportingClasses)
-add_subdirectory(SupportingClasses)
-
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/Expression)
 add_subdirectory(Expression)
-
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/Lexer)
 add_subdirectory(Lexer)
-
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/Parser)
 add_subdirectory(Parser)
-
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/Token)
 add_subdirectory(Token)
+add_subdirectory(Stack)
+add_subdirectory(Postfix)
+add_subdirectory(HierarchyList)
+
+
+## set(Lexer "${PROJECT_NAME}/Lexer")
+## set(LexerTest LexerTest)
+## set(LexerLib LexerLib)
+
+## include_directories(${CMAKE_CURRENT_SOURCE_DIR}/SupportingClasses)
+## include_directories(${CMAKE_CURRENT_SOURCE_DIR}/Expression)
+## include_directories(${CMAKE_CURRENT_SOURCE_DIR}/Lexer)
+## include_directories(${CMAKE_CURRENT_SOURCE_DIR}/Parser)
+## include_directories(${CMAKE_CURRENT_SOURCE_DIR}/Token)
+
+## set(Parser Parser)
+## set(ParserTest ParserTest)
+## set(ParserLib ParserLib)
+
+## set(Expression "${PROJECT_NAME}/Expression")
+## set(ExpressionTest ExpressionTest)
+## set(ExpressionLib ExpressionLib)
+
+## set(Token Token)
+## set(TokenTest TokenTest)
+## set(TokenLib TokenLib)
+
+### Supporting classes
+
+## set(HierarchyList HierarchyList)
+## set(HierarchyListTest HierarchyListTest)
+## set(HierarchyListLib HierarchyListLib)
+
+## set(Postfix Postfix)
+## set(PostfixTest PostfixTest)
+## set(PostfixLib PostfixLib)
+
+## set(Stack Stack)
+## set(StackTest StackTest)
+## set(StackLib StackLib)
