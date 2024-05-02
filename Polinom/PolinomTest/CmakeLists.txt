@@ -1,7 +1,0 @@
-file(GLOB srcs "*.cpp")
-file(GLOB hdrs "*.h")
-add_executable(${SUBPROJECT_NAME}Test ${srcs} ${hdrs})
-target_link_libraries(${SUBPROJECT_NAME}Test ${SUBPROJECT_NAME}Lib ${SUBPROJECT_NAME} gtest)
-set_target_properties(${SUBPROJECT_NAME}Test PROPERTIES FOLDER ${SUBPROJECT_NAME})
-
-# PolinomTest

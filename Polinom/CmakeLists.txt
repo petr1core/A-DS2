@@ -1,4 +1,7 @@
-set(SUBPROJECT_NAME Polinom)
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/${SUBPROJECT_NAME}Lib)
-add_subdirectory(${SUBPROJECT_NAME})
-add_subdirectory(${SUBPROJECT_NAME}Test)
+set(nameBaseProj Polinom) 
+set(test "${nameBaseProj}_test")
+
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
+add_subdirectory(samples)
+add_subdirectory(src)
+add_subdirectory(test)

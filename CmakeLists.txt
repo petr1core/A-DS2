@@ -1,32 +1,29 @@
-cmake_minimum_required(VERSION 3.5)
-set(PROJECT_NAME ADS-2-Lab)
+cmake_minimum_required(VERSION 2.8...3.13)
+set (CMAKE_CXX_STANDARD 20)
+
+set(PROJECT_NAME AaDS_2nd_lab)
 project(${PROJECT_NAME})
 
-# CMAKE_BINARY_DIR - Это полный путь к верхнему уровню текущего дерева сборки CMake.
-# Для сборки в исходном коде это будет то же самое, что и CMAKE_SOURCE_DIR.
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
-
-# Where to put all the ARCHIVE target files when built
-#
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE ${CMAKE_BINARY_DIR}/bin)
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG ${CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE})
-
-set(CMAKE_CONFIGURATION_TYPES "Debug;Release" CACHE STRING "Configs" FORCE)
+set(CMAKE_CONFIGURATION_TYPES "Debug;Release" CACHE STRING "Configs" FORCE) #Создается переменная CMAKE_CONFIGURATION_TYPES со значением "Debug;Release" и меткой/разделом Configs, переменная сохраниется в специальном файле доступном из всех файлов,
 if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE Release)
 endif()
+
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE ${CMAKE_BINARY_DIR}/bin)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG ${CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE})
 
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/gtest)
 add_subdirectory(gtest)
-add_subdirectory(Expression)
-add_subdirectory(Lexer)
-add_subdirectory(Parser)
-add_subdirectory(Token)
 add_subdirectory(Stack)
-add_subdirectory(Postfix)
+add_subdirectory(Token)
+add_subdirectory(Expression)
 add_subdirectory(HierarchyList)
-add_subdirectory(Polinom) # list
+add_subdirectory(Lexer)
 add_subdirectory(ListLinearTable)
+add_subdirectory(Parser)
+add_subdirectory(Polinom)
+add_subdirectory(Postfix)
