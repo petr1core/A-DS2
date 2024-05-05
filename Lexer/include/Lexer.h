@@ -1,16 +1,11 @@
-//
-// Created by egorm on 19.04.2024.
-//
-
-#ifndef LEXER_H
-#define LEXER_H
+#pragma once
+#include "../Token/include/Token.h"
+#include "../Token/include/TokenType.h"
 #include <iostream>
 #include <regex>
 #include<vector>
 #include<string>
 #include <set>
-#include "../Token/include/Token.h"
-#include "../Token/include/TokenType.h"
 #include <clocale>
 
 //Класс вроде как закончен, мб дополнения
@@ -19,15 +14,14 @@ private:
     // Вектор Токенов в коде Паскаль
     std::vector<Token> tokenList;
     std::string input_string;
-    std::string copy_input_string;
     // Вектор всех возможных типов слов в ПаскальАБС
     std::vector<std::pair<std::string, std::string> > vector;
     int pos = 0;
+    int i = 0;
 
 public:
     Lexer(const std::string& input_string) {
         this->input_string = input_string;
-        copy_input_string = input_string;
         vector = getLitTokenType();
         while (hasNext()) {
         }
@@ -42,11 +36,12 @@ public:
             if (std::regex_search(s.begin() + pos, s.end(), match, rgx)) {
                 std::string res = static_cast<std::string>(match[0]);
                 pos += res.length();
-                if (item.first != "SPACE")
+                if (item.first != "SPACE") {
                     tokenList.emplace_back(item.first, res, pos - res.length());
-                /* std::cout<<"Type of lexema: " <<item.first <<
-                 "; The space spent on the lexema: " << res.length() <<
-                 "; Value of lexema: "<<res<<" ;"<<std::endl;*/
+                    std::cout << "Type of lexema: " << item.first <<
+                        "; Pos: " << ++i <<
+                        "; Value of lexema: " << res << " ;" << std::endl;
+                }
                 return true;
             }
         }
@@ -71,6 +66,8 @@ public:
         return {
             {"CONST", "const"},
             {"VAR", "var"},
+            {"INC","to"},
+            {"DEC","downto"},
             {"THEN", "then"},
             {"DO", "do"},
             {"BEGIN", "begin"},
@@ -115,8 +112,6 @@ public:
             {"WRITE", "Write"},
             {"READ", "Read"},
             {"CYCLEFOR", "for"},
-            {"INC","to"},
-            {"DEC","downto"},
             {"CYCLEWHILE", "while"},
             {"CYCLEDOWHILE","repeat"},
             {"UNTIL","until"},
@@ -125,6 +120,3 @@ public:
         };
     }
 };
-
-
-#endif //LEXER_H

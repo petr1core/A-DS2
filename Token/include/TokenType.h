@@ -1,9 +1,7 @@
-//
-// Created by egorm on 19.04.2024.
-//
-
-#ifndef TOKENTYPE_H
-#define TOKENTYPE_H
+#pragma once
+#include <vector>
+#include <string>
+using namespace std;
 
 class TokenType {
 public:
@@ -57,4 +55,3 @@ public:
         };
     }
 };
-#endif //TOKENTYPE_H

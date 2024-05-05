@@ -1,20 +1,17 @@
-//
-// Created by shuri on 26.04.2024.
-//
-
-#ifndef POSTFIX_H
-#define POSTFIX_H
-
-
+#pragma once
 #include <string>
+#include <vector>
 #include <cmath>
 #include <stdexcept>
 #include <iostream>
 #include "../Stack/include/Stack.h"
 #include "../Token/include/Token.h"
-#include <vector>
-#include <cctype>
+#include "../Expression/include/StatementExpression.h"
+#include "../Expression/include/ConditionExpression.h"
+
+
 using namespace std;
+
 class TPostfixCalc // не доделан под нужды уравнений с переменными и сравнений
 {
 private:
@@ -24,7 +21,6 @@ private:
     TStack<char> operationStack;
     TStack<double> operandStack;
     double res;
-
 protected:
     int Priority(char c) {
         switch (c)
@@ -38,11 +34,10 @@ protected:
         case '*':
         case '/':
             return 3;
-        default: throw - 1;
+        default: throw std::runtime_error("Error message");
         }
     }
 public:
-
     TPostfixCalc() {
         postfix = "";
         infix = "";
@@ -51,22 +46,8 @@ public:
         res = 0;
     }
 
-    TPostfixCalc(string eq) {
-        if (eq.length() <= 0) throw std::runtime_error{ "ïóñòàÿ ñòðîêà" };
-        postfix = "";
-        infix = eq;
-        operationStack = TStack<char>(eq.length());
-        operandStack = TStack<double>(eq.length());
-        res = 0;
-    }
-    TPostfixCalc(std::vector<Token> v) {
-        //мб как то так
-        for (int i = 0; v.size() - 1; i++) {
-            infix += v[i].getValue();
-        }
-    }
     TPostfixCalc(const TPostfixCalc& c) {
-        if (&c == this) throw std::runtime_error{ "Íå ìîæåò áûòü ïðèñâîåí ýëåìåíò ñàìîìó ñåáå" };
+        if (&c == this) throw std::runtime_error{ "empty postfix Postfix given to copy constructor" };
         postfix = c.postfix;
         infix = c.infix;
         operationStack = c.operationStack;
@@ -74,6 +55,14 @@ public:
         res = c.res;
     }
 
+    TPostfixCalc(StatementExpression& s) {
+        if (s.isEmpty()) throw std::runtime_error("empty StatementExpression given to Postfix constructor");
+        infix = s.getStringExpression();
+        postfix = "";
+        operationStack = TStack<char>(0);
+        operandStack = TStack<double>(0);
+        res = 0;
+    }
 
     ~TPostfixCalc() {}
 
@@ -141,7 +130,7 @@ public:
                     d2 = operandStack.Pop();
                     operandStack.Push(d1 / d2);
                     break;
-                default: throw "ââåäè ÷î íèòü òî";
+                default: throw std::runtime_error("Error message");;
                 }
             }
             if (postfix[i] <= '9' && postfix[i] >= '0') {
@@ -202,6 +191,3 @@ public:
         return ostr;
     }
 };
-
-
-#endif //POSTFIX_H

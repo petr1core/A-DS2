@@ -1,4 +1,5 @@
 #include "../ListLinearTable/include/TableBase.h"
+#include "../ListLinearTable/include/List.h"
 #include <vector>
 using namespace std;
 
@@ -6,7 +7,12 @@ template<class Key, class Value>
 class LinearListTable : public Table<Key, Value>
 {
 protected:
-	TList<Row> arr;
+    struct Row {
+        Key key;
+        Value value;
+    };
+    TList<Row> arr;
+	
 public:
 	Value* Find(Key _key) override;
 	int Insert(Key _key, Value _val) override;
